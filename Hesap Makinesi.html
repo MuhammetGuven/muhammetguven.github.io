@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hesap Makinesi</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style type="text/css">
+             body {
+                background-image: url("arka.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .UL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt;
+                overflow: hidden;
+            }
+            .OL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt 31%;
+                overflow: auto;
+                width: 700px;
+            }
+            .LI {
+                float: left;
+                display: inline;
+            }
+            li a {
+                display: block;
+                padding: 14px 16px;
+                background-color: #858585;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition:all .3s ease-in;
+            }
+            li a:hover {
+                color: azure;
+                background-color: black;
+            }
+            .Secili {
+                color: azure;
+                background-color: rgb(24, 24, 24);
+            }
+
+            ol li .UL {
+                color: white;
+                display: none;
+                position: absolute;
+                width: 114px
+                
+            }
+            ol li:hover ul{
+                display: block;
+            }
+            li ul .LI {
+                display: block;
+            }
+            table {
+                background-color: white;
+                border:aqua solid 3px;
+            }
+		</style>
+		<script>
+		let s1;
+        let s2;
+        let islem;
+		let Sonuc;
+        
+        function Hesapla() {
+            s1 = Number(document.getElementById("Sayi1").value);
+            s2 = Number(document.getElementById("Sayi2").value);
+            islem = document.getElementById("plan").value;
+            
+            switch(islem){
+                case "top":
+                    Sonuc = s1 + s2;
+                    break;
+                    
+                case "cık":
+                    Sonuc = s1 - s2;
+                    break;
+                    
+                case "car":
+                    Sonuc = s1 * s2;
+                    break;
+                    
+                case "bol":
+                    if (s2 == 0) {
+                        alert("Sıfır ile bölemezsiniz(TANIMSIZ)");
+                        return;
+                    }
+                    Sonuc = s1 / s2;
+                    break;
+			}
+			document.getElementById("sk").value = Sonuc;
+            
+        }
+		</script>
+	</head>
+	<body>
+		<ol class="OL">
+            <li class="LI"><a  href="İletişim.html">Anasayfa</a></li>
+            <li class="LI"><a href="Hakkımda syfası.html">Hakkımda</a></li>
+            <li class="LI"><a class="Secili">Projelerim</a>
+                <ul class="UL">
+                    <li class="LI"><a class="Secili" href="Ödevler.html">*Ödevler* (HM)</a></li>
+                    <li class="LI"><a href="Boş Sayfa.html">Kendi  projelerim</a></li>
+                    <li class="LI"><a href="Boş Sayfa.html">Kaynak  kodları</a></li>
+                </ul>
+            </li>
+            <li class="LI"><a href="İletişim.html">İletişim</a></li>
+            <li class="LI"><a href="Boş Sayfa.html">Kaynakça</a></li>
+        </ol><br><br><br><br><br><br><br>
+		<table border="1" align="center">
+		  <tr>
+			<td>İlk sayı:</td> <td><input id="Sayi1" type="number" value=""></td>
+		  </tr>	
+		  <tr>
+			<td>İkinci sayı:</td> <td><input id="Sayi2" type="number" value=""></td>
+		  </tr>
+		  <tr>
+			<td>İşlem:</td> <td><select size="1" id="plan">
+							  <option value="top">+</option>	
+							  <option value="cık">-</option>
+							  <option value="car">x</option>
+							  <option value="bol">/</option>
+							  </select>
+							  <input type="submit" onclick="Hesapla()"value="Hesapla"></input></td>
+		  </tr>	
+		  <tr>	
+			<td>Sonuç:</td>    <td><input id="sk" type="text" readonly></input></td>
+		  </tr>
+		</table>
+	</body>
+</html>

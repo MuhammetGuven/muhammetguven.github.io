@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ödevler</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+        <style type="text/css">
+            body {
+                background-image: url("arka.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+                float: left;
+            }
+            .UL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt;
+                overflow: hidden;
+                float: left;
+            }
+            .OL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt 29%;
+                overflow: auto;
+                width: 700px;
+            }
+            .LI {
+                float: left;
+                display: inline;
+            }
+            li a {
+                display: block;
+                padding: 14px 16px;
+                background-color: #858585;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition:all .3s ease-in;
+            }
+            li a:hover {
+                color: azure;
+                background-color: black;
+            }
+            .Secili {
+                color: azure;
+                background-color: rgb(24, 24, 24);
+            }
+
+            ol li .UL {
+                color: white;
+                display: none;
+                position: absolute;
+                width: 114px
+                
+            }
+            ol li:hover ul{
+                display: block;
+            }
+            li ul .LI {
+                display: block;
+            }
+            div {
+                border: aqua 4px solid;
+                display: block;
+                width: 1300px;
+                height: 800;
+                left: 100px;
+                position:relative;
+                background-color: rgba(0, 0, 0, 0.658);
+                border-radius: 25px;
+                
+            }
+            img {
+                width: 350px;
+                height: 450px;
+            }
+            table {
+                padding-left: 90px;
+                border-spacing: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ol class="OL">
+                <li class="LI"><a  href="index.html">Anasayfa</a></li>
+                <li class="LI"><a href="Hakkımda syfası.html">Hakkımda</a></li>
+                <li class="LI"><a class="Secili">Projelerim</a>
+                    <ul class="UL">
+                        <li class="LI"><a class="Secili" href="Ödevler.html">*Ödevler*</a></li>
+                        <li class="LI"><a href="Boş Sayfa.html">Kendi  projelerim</a></li>
+                        <li class="LI"><a href="Boş Sayfa.html">Kaynak  kodları</a></li>
+                    </ul>
+                </li>
+                <li class="LI"><a href="İletişim.html">İletişim</a></li>
+                <li class="LI"><a href="Boş Sayfa.html">Kaynakça</a></li>
+            </ol><br><br><br><br>
+        <table>
+            <tr>
+                <th><a href="CV.html"><img src="Ödev/Cv.png"></a></th>
+                <th><a href="Kullanıcı Formu.html"><img src="Ödev/Form.png"></a></th>
+                <th><a href="Hesap Makinesi.html"><img src="Ödev/HMakinesi.png"></a></th>
+            </tr>
+        </table>
+
+        </div><br><br>
+    </body>
+</html>

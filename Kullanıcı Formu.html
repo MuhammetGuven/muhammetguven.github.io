@@ -1,0 +1,116 @@
+<html>
+<head>
+ <title>Form Uygulaması</title>
+ <meta charset="utf-8">
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <style type="text/css">
+	        body {
+                background-image: url("arka.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .UL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt;
+                overflow: hidden;
+            }
+            .OL {
+                list-style-type: none;
+                margin: 0pt;
+                padding: 0pt 31%;
+                overflow: auto;
+                width: 700px;
+            }
+            .LI {
+                float: left;
+                display: inline;
+            }
+            li a {
+                display: block;
+                padding: 14px 16px;
+                background-color: #858585;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transition:all .3s ease-in;
+            }
+            li a:hover {
+                color: azure;
+                background-color: black;
+            }
+            .Secili {
+                color: azure;
+                background-color: rgb(24, 24, 24);
+            }
+
+            ol li .UL {
+                color: white;
+                display: none;
+                position: absolute;
+                width: 114px
+                
+            }
+            ol li:hover ul{
+                display: block;
+            }
+            li ul .LI {
+                display: block;
+            }
+            table {
+                background-color: white;
+                border:aqua solid 3px;
+            }
+</style>	
+ <script language="javascript">
+	function f()
+	{
+	if(document.kontrol.ad.value=="Admin" && document.kontrol.sifre.value=="123")
+
+	{
+	alert("Giriş Başarılı")
+	window.location.href="https://www.google.com/";
+	}
+	else
+	{
+	alert("Hatalı Giriş")
+	}
+	}
+ </script>
+</head>
+<body>
+	<ol class="OL">
+		<li class="LI"><a  href="index.html">Anasayfa</a></li>
+		<li class="LI"><a href="Hakkımda syfası.html">Hakkımda</a></li>
+		<li class="LI"><a class="Secili">Projelerim</a>
+			<ul class="UL">
+				<li class="LI"><a class="Secili" href="Ödevler.html">*Ödevler* (KF)</a></li>
+				<li class="LI"><a href="Boş Sayfa.html">Kendi  projelerim</a></li>
+				<li class="LI"><a href="Boş Sayfa.html">Kaynak  kodları</a></li>
+			</ul>
+		</li>
+		<li class="LI"><a href="İletişim.html">İletişim</a></li>
+		<li class="LI"><a href="Boş Sayfa.html">Kaynakça</a></li>
+	</ol><br><br><br><br><br><br><br>
+<form action="" method="get" name="kontrol">
+	<table border="1" align="center">
+	<tr>	
+		<th>Kullanıcı adı:</th>
+		<th><input id="ad" name="ad" type="text" /><br /></th>
+	</tr>	
+	<tr>	
+		<th>Şifre:</th>
+		<th><input id="sifre" name="sifre" type="password" /><br /></th>
+	</tr>
+	<tr>
+		<th></th>
+		<th><input id="giris" name="giris" onclick="f()" type="button" value="GÖNDER" /></th>
+	</tr>
+	<tr>
+	<th align=center colspan="2">(Admin 123)</th>
+	</tr>
+	</table>
+ </form>
+</body>
+</html>
